@@ -28,9 +28,9 @@ namespace FindingBeauty
             maxHeight = imageSpace.rect.height;
         }
 
-        public void DisplayNewImage()
+        public void DisplayNewImage(int progressionIndex)
         {
-            SubjectImage image = imagePicker.PickImage();
+            SubjectImage image = imagePicker.PickImage(progressionIndex);
 
             if (image != null)
             {
