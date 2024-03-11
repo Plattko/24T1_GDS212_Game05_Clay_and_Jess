@@ -809,7 +809,9 @@ MonoBehaviour:
   animals: []
   places: []
   faces: []
-  playerImage: {fileID: 11400000, guid: 42b1047bb1250734f826e43183c8dfab, type: 2}
+  playerImage1: {fileID: 11400000, guid: 42b1047bb1250734f826e43183c8dfab, type: 2}
+  playerImage2: {fileID: 11400000, guid: 240aec69343912b43a79071b747eb188, type: 2}
+  playerImage3: {fileID: 11400000, guid: cafc531ece9453a4e91731cff4684ff2, type: 2}
 --- !u!114 &931288045
 MonoBehaviour:
   m_ObjectHideFlags: 0
