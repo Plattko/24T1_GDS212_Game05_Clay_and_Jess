@@ -804,10 +804,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tests:
   - {fileID: 11400000, guid: a4c6930ce5188574cab5afa6286c947e, type: 2}
-  flowers: []
-  trees: []
+  flowers:
+  - {fileID: 11400000, guid: 3a933c5970369d54cb7e13e3c28f63ff, type: 2}
+  - {fileID: 11400000, guid: 6e704be717bf9344a8d0f6a54e6bfa96, type: 2}
+  - {fileID: 11400000, guid: 87b8dde246a63d246b11b15e6568e4fd, type: 2}
+  - {fileID: 11400000, guid: 5371e1b3d07154d4eaaa30d49d7a0947, type: 2}
+  - {fileID: 11400000, guid: 62a0d34f03d4beb469fb324784dc4d31, type: 2}
+  trees:
+  - {fileID: 11400000, guid: 916f6cb26e23ac74da524af71cc0481b, type: 2}
+  - {fileID: 11400000, guid: 7084ad58c9783aa4688bfbc9eb23693b, type: 2}
+  - {fileID: 11400000, guid: 5ef6d6a33f89cd847b8b7347eb90a857, type: 2}
+  - {fileID: 11400000, guid: 44e634459623c4c438ba21e5c85e3459, type: 2}
+  - {fileID: 11400000, guid: 64bc7c2ee5e4a3b4c962ad4ea9cb05ec, type: 2}
   animals: []
-  places: []
+  places:
+  - {fileID: 11400000, guid: b8dd6decec0b62f4bb5b03e7ca9dacff, type: 2}
+  - {fileID: 11400000, guid: fa888cc3d5c3f154a9ef1d85f01cf31a, type: 2}
+  - {fileID: 11400000, guid: 265fd1747f9b15a41b13db5e9f9b1b1a, type: 2}
+  - {fileID: 11400000, guid: 16215ae5a6893144f944906c73d60d34, type: 2}
+  - {fileID: 11400000, guid: ffaa8b55e9039634a9f4cfeac60dc383, type: 2}
   faces: []
   playerImage1: {fileID: 11400000, guid: 42b1047bb1250734f826e43183c8dfab, type: 2}
   playerImage2: {fileID: 11400000, guid: 240aec69343912b43a79071b747eb188, type: 2}
