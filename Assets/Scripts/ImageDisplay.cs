@@ -10,23 +10,32 @@ namespace FindingBeauty
     {
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI infoText;
+
         [SerializeField] private Image displayImage;
+        [SerializeField] private Image frameImage;
 
         private ImagePicker imagePicker;
+
+        [Header("Image Scaling")]
+        [SerializeField] private SubjectImage playerImage;
+        [SerializeField] private RectTransform imageSpace;
+        private float maxHeight;
         
         void Start()
         {
             imagePicker = GetComponent<ImagePicker>();
+
+            maxHeight = imageSpace.rect.height;
         }
 
-        private void DisplayNewImage()
+        public void DisplayNewImage()
         {
             SubjectImage image = imagePicker.PickImage();
 
             if (image != null)
             {
                 nameText.text = image.name;
-                displayImage.sprite = image.image;
+                SetImage(image);
                 infoText.text = image.imageInfo;
             }
             else
@@ -35,11 +44,33 @@ namespace FindingBeauty
             }
         }
 
-        public void SubmitButton()
+        private void SetImage(SubjectImage image)
         {
-            // Add collage functionality
+            displayImage.sprite = image.image;
 
-            DisplayNewImage();
+            if (image.name != playerImage.name)
+            {
+                displayImage.SetNativeSize();
+
+                float currentWidth = image.image.rect.width;
+                float currentHeight = image.image.rect.height;
+
+                if (currentHeight > maxHeight)
+                {
+                    float aspectRatio = currentWidth / currentHeight;
+                    float clampedHeight = Mathf.Clamp(currentHeight, 0f, maxHeight);
+                    float clampedWidth = clampedHeight * aspectRatio;
+                    displayImage.rectTransform.sizeDelta = new Vector2(clampedWidth, clampedHeight);
+                }
+
+                frameImage.rectTransform.sizeDelta = displayImage.rectTransform.sizeDelta;
+            }
+            else
+            {
+                Vector2 imageSpaceScale = new Vector2(imageSpace.rect.width, imageSpace.rect.height);
+                displayImage.rectTransform.sizeDelta = imageSpaceScale;
+                frameImage.rectTransform.sizeDelta = imageSpaceScale;
+            }
         }
     }
 }
