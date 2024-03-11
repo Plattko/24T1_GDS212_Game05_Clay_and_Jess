@@ -23,7 +23,7 @@ namespace FindingBeauty
             // Empty input field
             writingInputField.text = "";
 
-            imageDisplay. DisplayNewImage();
+            imageDisplay.DisplayNewImage();
         }
     }
 }
