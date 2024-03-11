@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 234197488}
   - component: {fileID: 234197487}
   m_Layer: 5
-  m_Name: TestInputField
+  m_Name: WritingInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,6 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 931288042}
+  - component: {fileID: 931288045}
   - component: {fileID: 931288044}
   - component: {fileID: 931288043}
   m_Layer: 0
@@ -809,6 +810,19 @@ MonoBehaviour:
   places: []
   faces: []
   playerImage: {fileID: 11400000, guid: 42b1047bb1250734f826e43183c8dfab, type: 2}
+--- !u!114 &931288045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931288041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54308cb0e81331c44bf32a5b80249f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  writingInputField: {fileID: 234197487}
 --- !u!1 &975898364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,8 +1383,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 931288043}
-        m_TargetAssemblyTypeName: FindingBeauty.ImageDisplay, Assembly-CSharp
+      - m_Target: {fileID: 931288045}
+        m_TargetAssemblyTypeName: FindingBeauty.GameController, Assembly-CSharp
         m_MethodName: SubmitButton
         m_Mode: 1
         m_Arguments:

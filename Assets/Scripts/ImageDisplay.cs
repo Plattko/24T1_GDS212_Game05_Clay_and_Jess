@@ -28,7 +28,7 @@ namespace FindingBeauty
             maxHeight = imageSpace.rect.height;
         }
 
-        private void DisplayNewImage()
+        public void DisplayNewImage()
         {
             SubjectImage image = imagePicker.PickImage();
 
@@ -71,13 +71,6 @@ namespace FindingBeauty
                 displayImage.rectTransform.sizeDelta = imageSpaceScale;
                 frameImage.rectTransform.sizeDelta = imageSpaceScale;
             }
-        }
-
-        public void SubmitButton()
-        {
-            // Add collage functionality
-
-            DisplayNewImage();
         }
     }
 }
