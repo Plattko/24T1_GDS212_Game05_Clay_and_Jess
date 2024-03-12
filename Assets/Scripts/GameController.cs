@@ -2,28 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace FindingBeauty
 {
     public class GameController : MonoBehaviour
     {
+        private ImagePicker imagePicker;
         private ImageDisplay imageDisplay;
 
         [SerializeField] private TMP_InputField writingInputField;
 
+        private int progressionIndex = 1;
+
         private void Start()
         {
+            imagePicker = GetComponent<ImagePicker>();
             imageDisplay = GetComponent<ImageDisplay>();
         }
 
         public void SubmitButton()
         {
-            // Add collage functionality
+            Debug.Log("Progression index: " + progressionIndex);
 
-            // Empty input field
-            writingInputField.text = "";
+            if (progressionIndex < 18)
+            {
+                // Add collage functionality
 
-            imageDisplay.DisplayNewImage();
+                // Empty input field
+                writingInputField.text = "";
+
+                imageDisplay.DisplayNewImage(progressionIndex);
+                progressionIndex++;
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }
