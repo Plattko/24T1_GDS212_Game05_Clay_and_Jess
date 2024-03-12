@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
-  m_Name: Person2
+  m_Name: Person4
   m_EditorClassIdentifier: 
-  name: Person2
+  name: Mikaela
   imageInfo: 
-  image: {fileID: 21300000, guid: 0e16980cb20e917469a03888b80055d8, type: 3}
+  image: {fileID: 21300000, guid: a7742598771ce024ea75bc850a79c384, type: 3}

@@ -823,14 +823,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 265fd1747f9b15a41b13db5e9f9b1b1a, type: 2}
   - {fileID: 11400000, guid: 16215ae5a6893144f944906c73d60d34, type: 2}
   - {fileID: 11400000, guid: ffaa8b55e9039634a9f4cfeac60dc383, type: 2}
+  settings:
+  - {fileID: 11400000, guid: 77f88eba453881c4b85405b41513bccd, type: 2}
+  - {fileID: 11400000, guid: 6db32f53e5dc4bb47912111ee7c8a9c0, type: 2}
+  - {fileID: 11400000, guid: ddb08c9d30bd1d54a8de17943b8fbc9c, type: 2}
   faces:
   - {fileID: 11400000, guid: 6cc71de55dca3924ab32dc71b8f0a140, type: 2}
   - {fileID: 11400000, guid: 3047e2afec2f1184a9ca80bd6e429c95, type: 2}
   - {fileID: 11400000, guid: 98270c06ff4e29f4c9e66edd9fea1d55, type: 2}
   - {fileID: 11400000, guid: 4e4391f05e1ede24a8d4199ba4bfd7a5, type: 2}
-  - {fileID: 11400000, guid: 77f88eba453881c4b85405b41513bccd, type: 2}
-  - {fileID: 11400000, guid: 6db32f53e5dc4bb47912111ee7c8a9c0, type: 2}
-  - {fileID: 11400000, guid: ddb08c9d30bd1d54a8de17943b8fbc9c, type: 2}
   playerImage1: {fileID: 11400000, guid: 42b1047bb1250734f826e43183c8dfab, type: 2}
   playerImage2: {fileID: 11400000, guid: 240aec69343912b43a79071b747eb188, type: 2}
   playerImage3: {fileID: 11400000, guid: cafc531ece9453a4e91731cff4684ff2, type: 2}

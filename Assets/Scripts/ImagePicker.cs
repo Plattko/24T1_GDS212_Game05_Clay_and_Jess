@@ -17,6 +17,8 @@ namespace FindingBeauty
         [SerializeField] private List<SubjectImage> animals = new List<SubjectImage>();
         [Header("Place Images")]
         [SerializeField] private List<SubjectImage> places = new List<SubjectImage>();
+        [Header("SettingFace Images")]
+        [SerializeField] private List<SubjectImage> settings = new List<SubjectImage>();
         [Header("Face Images")]
         [SerializeField] private List<SubjectImage> faces = new List<SubjectImage>();
 
@@ -25,16 +27,9 @@ namespace FindingBeauty
         [SerializeField] private SubjectImage playerImage2;
         [SerializeField] private SubjectImage playerImage3;
 
-        private List<List<SubjectImage>> categories = new List<List<SubjectImage>>();
-
-        private void Start()
-        {
-            categories.AddRange(new List<List<SubjectImage>> { flowers, trees, animals, places, faces });
-        }
-
         public SubjectImage PickImage(int progressionIndex)
         {
-            if (progressionIndex < 15)
+            if (progressionIndex < 23)
             {
                 List<SubjectImage> imageList = PickCategory(progressionIndex);
 
@@ -48,15 +43,15 @@ namespace FindingBeauty
                     return image;
                 }
             }
-            else if (progressionIndex == 15)
+            else if (progressionIndex == 23)
             {
                 return playerImage1;
             }
-            else if (progressionIndex == 16)
+            else if (progressionIndex == 24)
             {
                 return playerImage2;
             }
-            else if (progressionIndex == 17)
+            else if (progressionIndex == 25)
             {
                 return playerImage3;
             }
@@ -68,35 +63,28 @@ namespace FindingBeauty
         {
             List<SubjectImage> list = new List<SubjectImage>();
 
-            // Image 1 is a flower
-            if (progressionIndex == 1)
+            // Images 1-5 are flowers
+            if (progressionIndex >= 1 && progressionIndex <6)
             {
                 list = flowers;
             }
-            // Image 2 is a tree
-            else if (progressionIndex == 2)
+            // Images 6-10 are trees
+            else if (progressionIndex >= 6 && progressionIndex < 11)
             {
                 list = trees;
             }
-            // Images 3-5 are flowers or trees
-            else if (progressionIndex >= 3 && progressionIndex < 6)
-            {
-                List<List<SubjectImage>> availableCategories = new List<List<SubjectImage>> { flowers, trees };
-                list = availableCategories[Random.Range(0, availableCategories.Count)];
-            }
-            // Image 6 is a place
-            else if (progressionIndex == 6)
+            // Images 11-15 are places
+            else if (progressionIndex >= 11 && progressionIndex < 16)
             {
                 list = places;
             }
-            // Images 7-9 are flowers, trees or places
-            else if (progressionIndex >= 7 && progressionIndex < 10)
+            // Images 16-18 are settings
+            else if (progressionIndex >= 16 && progressionIndex < 19)
             {
-                List<List<SubjectImage>> availableCategories = new List<List<SubjectImage>> { flowers, trees, places };
-                list = availableCategories[Random.Range(0, availableCategories.Count)];
+                list = settings;
             }
-            // Images 10-14 are faces
-            else if (progressionIndex >= 10 && progressionIndex < 15)
+            // Images 19-22 are faces
+            else if (progressionIndex >= 19 && progressionIndex < 23)
             {
                 list = faces;
             }

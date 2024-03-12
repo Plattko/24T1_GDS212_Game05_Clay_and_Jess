@@ -25,7 +25,7 @@ namespace FindingBeauty
         {
             Debug.Log("Progression index: " + progressionIndex);
 
-            if (progressionIndex < 18)
+            if (progressionIndex < 23)
             {
                 // Add collage functionality
 
