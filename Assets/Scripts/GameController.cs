@@ -8,8 +8,8 @@ namespace FindingBeauty
 {
     public class GameController : MonoBehaviour
     {
-        private ImagePicker imagePicker;
         private ImageDisplay imageDisplay;
+        private Onboarding onboarding;
 
         [SerializeField] private TMP_InputField writingInputField;
 
@@ -17,8 +17,8 @@ namespace FindingBeauty
 
         private void Start()
         {
-            imagePicker = GetComponent<ImagePicker>();
             imageDisplay = GetComponent<ImageDisplay>();
+            onboarding = GetComponent<Onboarding>();
         }
 
         public void SubmitButton()
@@ -39,6 +39,11 @@ namespace FindingBeauty
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+        }
+
+        public void PlayButton()
+        {
+            onboarding.StartCoroutine(onboarding.StartGame());
         }
     }
 }
