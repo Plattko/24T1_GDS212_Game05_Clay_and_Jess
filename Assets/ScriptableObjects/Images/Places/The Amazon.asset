@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
+  m_Name: The Amazon
+  m_EditorClassIdentifier: 
+  name: The Amazon Rainforest
+  imageInfo: Amazonia - The Amazon Rainforest, the largest tropical rainforest in
+    the world, covers an area of approximately 5.5 million square kilometers. It
+    spans across nine countries in South America, with the majority of the forest
+    located in Brazil.
+  image: {fileID: 21300000, guid: 535a97390d3835040a9c7292785609e9, type: 3}
