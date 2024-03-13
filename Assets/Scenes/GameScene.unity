@@ -1521,6 +1521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 2031341771}
   infoText: {fileID: 1055773076}
+  infoTypewriterEffect: {fileID: 1055773078}
   displayImage: {fileID: 1166827484}
   frameImage: {fileID: 840269836}
   playerImage: {fileID: 11400000, guid: 42b1047bb1250734f826e43183c8dfab, type: 2}
@@ -1619,6 +1620,8 @@ MonoBehaviour:
   instructionText5: {fileID: 1251506358}
   writingInputField: {fileID: 234197487}
   submitButton: {fileID: 1171076998}
+  isInTransition: 1
+  infoTypewriterEffect: {fileID: 1055773078}
 --- !u!1 &975898364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +1927,7 @@ GameObject:
   - component: {fileID: 1055773078}
   m_Layer: 5
   m_Name: InfoText
-  m_TagString: Untagged
+  m_TagString: ImageInfoText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2052,7 +2055,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055773073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 994700409464fda4db61d4dbec5f0900, type: 3}
   m_Name: 

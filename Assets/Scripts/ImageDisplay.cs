@@ -10,6 +10,7 @@ namespace FindingBeauty
     {
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI infoText;
+        [SerializeField] private TypewriterEffect infoTypewriterEffect;
 
         [SerializeField] private Image displayImage;
         [SerializeField] private Image frameImage;
@@ -36,7 +37,7 @@ namespace FindingBeauty
             {
                 nameText.text = image.name;
                 SetImage(image);
-                infoText.text = image.imageInfo;
+                SetInfoText(image);
             }
             else
             {
@@ -71,6 +72,11 @@ namespace FindingBeauty
                 displayImage.rectTransform.sizeDelta = imageSpaceScale;
                 frameImage.rectTransform.sizeDelta = imageSpaceScale;
             }
+        }
+
+        private void SetInfoText(SubjectImage image)
+        {
+            infoTypewriterEffect.SetText(null, image.imageInfo);
         }
     }
 }

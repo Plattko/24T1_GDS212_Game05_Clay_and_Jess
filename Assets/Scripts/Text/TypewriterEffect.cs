@@ -15,9 +15,10 @@ namespace FindingBeauty
         private Coroutine typewriterCoroutine;
 
         [Header("Typewriter Settings")]
-        [SerializeField] private float charactersPerSecond = 20f;
+        [SerializeField] private float charactersPerSecond = 30f;
         
         private WaitForSeconds characterDelay;
+        private bool isImageInfoText = false;
 
         // Text Skipping Functionality
         public bool isSkipping { get; private set; }
@@ -34,24 +35,33 @@ namespace FindingBeauty
 
             characterDelay = new WaitForSeconds(1 / charactersPerSecond);
             textCompleteEventDelay = new WaitForSeconds(sendCompleteDelay);
+
+            isImageInfoText = (gameObject.tag == "ImageInfoText");
         }
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0) && textBox.maxVisibleCharacters != textBox.textInfo.characterCount - 1)
+            if (!isImageInfoText)
             {
-                Skip();
+                if (Input.GetMouseButtonDown(0) && textBox.maxVisibleCharacters != textBox.textInfo.characterCount - 1)
+                {
+                    Skip();
+                }
             }
         }
 
-        public void SetText(Action onCompleteCallback = null)
+        public void SetText(Action onCompleteCallback = null, string text = null)
         {
             TypewriterCompleteCallback = onCompleteCallback;
             
             // Stop the current typewriter coroutine if it exists
             StopTypewriter();
 
-            // Reset the max and current visible characters to 0
+            // Set the new text and reset the max and current visible characters to 0
+            if (text != null)
+            {
+                textBox.text = text;
+            }
             textBox.maxVisibleCharacters = 0;
             currentVisibleCharacterIndex = 0;
 

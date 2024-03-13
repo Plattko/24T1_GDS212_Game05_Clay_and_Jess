@@ -29,6 +29,9 @@ namespace FindingBeauty
 
         public bool isInTransition = true;
 
+        [Header("Finish Onboarding Variables")]
+        [SerializeField] private TypewriterEffect infoTypewriterEffect;
+
         private void Awake()
         {
             mainMenuLayout.gameObject.SetActive(true);
@@ -148,6 +151,8 @@ namespace FindingBeauty
             submitButton.enabled = true;
 
             Debug.Log("Onboarding complete.");
+            infoTypewriterEffect.enabled = true;
+            enabled = false;
         }
     }
 }
