@@ -18,31 +18,36 @@ namespace FindingBeauty
         [SerializeField] private TextMeshProUGUI instructionText3;
         [SerializeField] private TextMeshProUGUI instructionText4;
         [SerializeField] private TextMeshProUGUI instructionText5;
+        
         private TextMeshProUGUI currentText;
 
         private List<TextMeshProUGUI> instructionMessages = new List<TextMeshProUGUI>();
-
-        private bool isInTextTransition = true;
 
         [Header("Interactable Elements")]
         [SerializeField] private TMP_InputField writingInputField;
         [SerializeField] private Button submitButton;
 
-        void Start()
+        public bool isInTransition = true;
+
+        private void Awake()
         {
-            // Get all components of main menu with an alpha
+            mainMenuLayout.gameObject.SetActive(true);
+            gameLayout.gameObject.SetActive(false);
 
             instructionMessages.AddRange(new List<TextMeshProUGUI> { instructionText1, instructionText2, instructionText3, instructionText4, instructionText5 });
 
-            mainMenuLayout.gameObject.SetActive(true);
-            gameLayout.gameObject.SetActive(false);
+            foreach (TextMeshProUGUI text in instructionMessages)
+            {
+                text.gameObject.SetActive(false);
+            }
+
             writingInputField.enabled = false;
             submitButton.enabled = false;
         }
 
-        void Update()
+        private void Update()
         {
-            if (Input.GetMouseButtonDown(0) && !isInTextTransition)
+            if (Input.GetMouseButtonDown(0) && !isInTransition)
             {
                 if (instructionMessages.Count > 0)
                 {
@@ -51,7 +56,7 @@ namespace FindingBeauty
                 else
                 {
                     // Start gameplay
-                    StartCoroutine(StartGameplay());
+                    StartCoroutine(FinishOnboarding());
                 }
             }
         }
@@ -66,11 +71,13 @@ namespace FindingBeauty
 
         private IEnumerator UpdateText()
         {
-            isInTextTransition = true;
+            isInTransition = true;
 
+            // Fade out the current text if it exists
             if (currentText != null)
             {
                 yield return StartCoroutine(FadeText(currentText, 1f, 0f, 0.5f));
+                currentText.gameObject.SetActive(false);
             }
 
             if (currentText == instructionText1)
@@ -80,12 +87,23 @@ namespace FindingBeauty
                 yield return StartCoroutine(FadeLayout(gameLayout, 0f, 1f, 1f));
             }
 
+            // Get the next text
             TextMeshProUGUI text = GetNextText();
 
-            yield return StartCoroutine(FadeText(text, 0f, 1f, 1f));
+            text.maxVisibleCharacters = 0;
+            // Enable the next text
+            text.gameObject.SetActive(true);
 
-            currentText = text;
-            isInTextTransition = false;
+            // Play the typewriter effect and end the transition when it finishes
+            text.transform.GetComponent<TypewriterEffect>().SetText(() =>
+            {
+                // Update the current text
+                currentText = text;
+                // Display the text's continue sprite
+                text.transform.GetComponent<DisplayContinueSprite>().ShowContinueSprite();
+                // End the transition
+                isInTransition = false;
+            });
         }
 
         private TextMeshProUGUI GetNextText()
@@ -119,11 +137,12 @@ namespace FindingBeauty
             }
         }
 
-        private IEnumerator StartGameplay()
+        private IEnumerator FinishOnboarding()
         {
-            isInTextTransition = true;
+            isInTransition = true;
 
             yield return StartCoroutine(FadeText(currentText, 1f, 0f, 0.5f));
+            currentText.gameObject.SetActive(false);
 
             writingInputField.enabled = true;
             submitButton.enabled = true;
