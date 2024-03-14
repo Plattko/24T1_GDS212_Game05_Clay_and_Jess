@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Lydia
   imageInfo: ...
-  image: {fileID: 21300000, guid: 4e07e947047198e47b3219fb85287789, type: 3}
+  image: {fileID: 21300000, guid: f06d7fc939cb3c848ad7e56930c44c72, type: 3}

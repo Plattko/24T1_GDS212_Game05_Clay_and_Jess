@@ -15,6 +15,5 @@ MonoBehaviour:
   name: Abandoned Building
   imageInfo: The South Fremantle Power Station - Located in North Coogee, Western
     Australia, is a decommissioned coal-fired power plant that was operational from
-    1951 to 1985. Since its closure, the building has become a site for urban exploration
-    and graffiti, standing as a relic of industrial architecture along the coast.
+    1951 to 1985.
   image: {fileID: 21300000, guid: 5057352fc7704d14a947d61bdbb2f945, type: 3}

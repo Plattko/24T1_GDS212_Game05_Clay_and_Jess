@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Lilies
   m_EditorClassIdentifier: 
   name: Lilies
-  imageInfo: Lilium - Lilies are a group flowering species. Most lily species are
-    native to the Northern Hemisphere, thriving in temperate climates and extending
-    into subtropical regions.
+  imageInfo: Lilium - Lilies are a group flowering species, thriving in temperate
+    climates and extending into subtropical regions.
   image: {fileID: 21300000, guid: 1774c4e5e5a4e4d439c664caa4345ca9, type: 3}

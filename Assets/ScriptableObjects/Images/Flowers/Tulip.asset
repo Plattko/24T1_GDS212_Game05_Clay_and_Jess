@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Tulip
   m_EditorClassIdentifier: 
   name: Tulips
-  imageInfo: 'Tulipa - Tulips are typically brightly coloured, large flowers grown
-    in temperate climates.   The name "tulip" is believed to originate from a Persian
-    word meaning "turban," reflecting its perceived resemblance to this headwear
-    by its discoverers. '
+  imageInfo: Tulipa - Tulips are typically brightly coloured, large flowers grown
+    in temperate climates.
   image: {fileID: 21300000, guid: 46aab84ad2653374d9fc048d34baf13f, type: 3}

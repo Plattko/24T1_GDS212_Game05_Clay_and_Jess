@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: The Amazon Rainforest
   imageInfo: Amazonia - The Amazon Rainforest, the largest tropical rainforest in
-    the world, covers an area of approximately 5.5 million square kilometers. It
-    spans across nine countries in South America, with the majority of the forest
-    located in Brazil.
+    the world, covers an area of approximately 5.5 million square kilometers.
   image: {fileID: 21300000, guid: 535a97390d3835040a9c7292785609e9, type: 3}

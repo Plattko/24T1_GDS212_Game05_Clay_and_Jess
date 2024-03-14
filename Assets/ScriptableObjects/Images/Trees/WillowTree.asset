@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Willow Tree
   imageInfo: Salix Alba - Willow trees thrive in cold and temperate regions, primarily
-    on moist soils. Willows are shade tolerant and tend to have a short lifespan.
+    on moist soils.
   image: {fileID: 21300000, guid: c7966663653a7e548865209a037438a0, type: 3}

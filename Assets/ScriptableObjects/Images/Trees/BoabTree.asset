@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: BoabTree
   m_EditorClassIdentifier: 
   name: Boab Tree
-  imageInfo: 'Adansonia gregorii - This distinctive tree is found in the Kimberley
-    region of Western Australia.  The boab tree, known as Gadawon among local Aboriginal
-    Australian groups, is easily identifiable by its swollen trunk base, forming
-    a large caudex that gives the tree a bottle-like shape.  '
+  imageInfo: Adansonia gregorii - Found in the Kimberley region of Western Australia. 
+    The boab tree, known as Gadawon among local Aboriginal Australian groups.
   image: {fileID: 21300000, guid: fcff76ee7d93e6b408a7ac32ee0a6a79, type: 3}

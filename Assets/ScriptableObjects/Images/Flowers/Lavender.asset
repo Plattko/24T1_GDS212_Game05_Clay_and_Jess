@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Lavender
   m_EditorClassIdentifier: 
   name: Lavender
-  imageInfo: 'Lavandula - A flowering plant, known for its distinct violet hue. 
-    Often cultivated in temperate climates, lavender is commonly used in herbal medicine,
-    cosmetics and essential oils. '
+  imageInfo: Lavandula - A flowering plant, known for its distinct violet hue.
   image: {fileID: 21300000, guid: 860aec53a69f76643964fbf2a53e07ec, type: 3}

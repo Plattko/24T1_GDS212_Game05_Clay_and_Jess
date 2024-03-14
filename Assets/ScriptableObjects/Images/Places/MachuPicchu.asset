@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: MachuPicchu
   m_EditorClassIdentifier: 
   name: Machu Picchu
-  imageInfo: Machu Picchu - An Incan citadel set high in the Andes Mountains, it's
-    famed for its sophisticated dry-stone construction that fuses huge blocks without
-    the use of mortar.
+  imageInfo: Machu Picchu - An Incan citadel set high in the Andes Mountains.
   image: {fileID: 21300000, guid: c3d6c17ebfd8c094091a2a069648c825, type: 3}
