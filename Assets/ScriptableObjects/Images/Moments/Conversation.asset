@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Conversation
   imageInfo: A conversation with a friend.
-  image: {fileID: 21300000, guid: 689bbed0b28c5964d8ba71d0518ec35a, type: 3}
+  image: {fileID: 21300000, guid: 934e671a167792b4898d6539b9cf09e4, type: 3}

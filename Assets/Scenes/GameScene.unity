@@ -3116,15 +3116,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dfddc38eb56dd1b47a6c34f9d7dadc60, type: 2}
   - {fileID: 11400000, guid: 825ab80300e9dd14a9c6809a4ac60837, type: 2}
   - {fileID: 11400000, guid: f0ccb905ebc51594c8af7d24eacbc651, type: 2}
-  settings:
-  - {fileID: 11400000, guid: 77f88eba453881c4b85405b41513bccd, type: 2}
-  - {fileID: 11400000, guid: 6db32f53e5dc4bb47912111ee7c8a9c0, type: 2}
-  - {fileID: 11400000, guid: ddb08c9d30bd1d54a8de17943b8fbc9c, type: 2}
+  moments:
   - {fileID: 11400000, guid: 9fa4330c5d9a65748955e917fd317e57, type: 2}
+  - {fileID: 11400000, guid: 77f88eba453881c4b85405b41513bccd, type: 2}
   - {fileID: 11400000, guid: 6349203ae58240f449e332ca1d9957cf, type: 2}
   - {fileID: 11400000, guid: fd534928af845fc408a5159f8881f47d, type: 2}
+  - {fileID: 11400000, guid: ddb08c9d30bd1d54a8de17943b8fbc9c, type: 2}
   - {fileID: 11400000, guid: a6b93466f0bc2ea419072569539e0e28, type: 2}
   - {fileID: 11400000, guid: 1f4abe2ad4c027647b25076d2ec4c95c, type: 2}
+  - {fileID: 11400000, guid: 6db32f53e5dc4bb47912111ee7c8a9c0, type: 2}
   - {fileID: 11400000, guid: 447dae1cd38bbdf4ba1619b746401a99, type: 2}
   faces:
   - {fileID: 11400000, guid: 6cc71de55dca3924ab32dc71b8f0a140, type: 2}

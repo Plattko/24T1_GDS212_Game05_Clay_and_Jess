@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Darren
   imageInfo: ...
-  image: {fileID: 21300000, guid: c9c68b950257ca84a9e3cdf45677ccc6, type: 3}
+  image: {fileID: 21300000, guid: 3047f011e49aaca43bf309be234155ce, type: 3}

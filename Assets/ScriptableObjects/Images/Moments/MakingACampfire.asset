@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Campfire
   imageInfo: Feeling the warmth on a cold night.
-  image: {fileID: 21300000, guid: 7e55b9f827134424e985eb23bdecd96b, type: 3}
+  image: {fileID: 21300000, guid: 30c2a444a175de54c8044a9ba36eb537, type: 3}
