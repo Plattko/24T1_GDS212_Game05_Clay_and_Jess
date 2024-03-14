@@ -25,7 +25,7 @@ namespace FindingBeauty
         {
             continueGroup.alpha = 0f;
             continueSpriteSpace.SetActive(true);
-            StartCoroutine(FadeInSprite(0.25f));
+            StartCoroutine(FadeInSprite(0.5f));
             Debug.Log(name);
             Debug.Log("Called ShowContinueSprite.");
         }

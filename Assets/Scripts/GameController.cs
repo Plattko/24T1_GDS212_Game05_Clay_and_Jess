@@ -18,6 +18,11 @@ namespace FindingBeauty
 
         private int progressionIndex = 1;
 
+        [Header("Sound Effect Variables")]
+        [SerializeField] private SFXManager sfxManager;
+        [SerializeField] private AudioClip submitButtonSFX;
+        [SerializeField] private AudioClip buttonSFX;
+
         private void Start()
         {
             imageDisplay = GetComponent<ImageDisplay>();
@@ -56,7 +61,8 @@ namespace FindingBeauty
                 // Empty input field
                 writingInputField.text = "";
 
-                imageDisplay.DisplayNewImage(progressionIndex);
+                imageDisplay.StartCoroutine(imageDisplay.DisplayNewImage(progressionIndex));
+                sfxManager.PlaySoundEffect(submitButtonSFX, transform, 0.4f);
                 progressionIndex++;
             }
             else
@@ -73,6 +79,7 @@ namespace FindingBeauty
 
         public void PlayButton()
         {
+            sfxManager.PlaySoundEffect(buttonSFX, transform, 0.4f);
             onboarding.StartCoroutine(onboarding.StartGame());
         }
     }
