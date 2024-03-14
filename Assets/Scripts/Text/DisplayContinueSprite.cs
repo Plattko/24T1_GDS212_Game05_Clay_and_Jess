@@ -42,7 +42,6 @@ namespace FindingBeauty
             {
                 float newScale = Mathf.Lerp(1f, 1.4f, timeElapsed / enlargeDuration);
                 rectTransform.localScale = new Vector3(newScale, newScale, newScale);
-                Debug.Log("Scale is: " + rectTransform.localScale);
                 timeElapsed += Time.deltaTime;
                 yield return null;
             }

@@ -74,6 +74,7 @@ namespace FindingBeauty
 
         private IEnumerator UpdateText()
         {
+            Debug.Log("Called UpdateText.");
             isInTransition = true;
 
             // Fade out the current text if it exists

@@ -43,8 +43,9 @@ namespace FindingBeauty
         {
             if (!isImageInfoText)
             {
-                if (Input.GetMouseButtonDown(0) && textBox.maxVisibleCharacters != textBox.textInfo.characterCount - 1)
+                if (Input.GetMouseButtonDown(0) && textBox.maxVisibleCharacters != textBox.textInfo.characterCount)
                 {
+                    Debug.Log("Max visible characters: " + textBox.maxVisibleCharacters + ". Character count: " + (textBox.textInfo.characterCount));
                     Skip();
                 }
             }
@@ -97,6 +98,8 @@ namespace FindingBeauty
 
         private void Skip()
         {
+            Debug.Log("Called skip.");
+            
             if (isSkipping)
             {
                 return;
