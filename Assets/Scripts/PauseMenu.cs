@@ -8,6 +8,10 @@ namespace FindingBeauty
     {
         [SerializeField] private GameObject pauseMenu;
 
+        [Header("Sound Effect Variables")]
+        [SerializeField] private SFXManager sfxManager;
+        [SerializeField] private AudioClip buttonSFX;
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeInHierarchy == false)
@@ -23,11 +27,13 @@ namespace FindingBeauty
         public void SettingsButton()
         {
             pauseMenu.SetActive(true);
+            sfxManager.PlaySoundEffect(buttonSFX, transform, 0.4f);
         }
 
         public void BackButton()
         {
             pauseMenu.SetActive(false);
+            sfxManager.PlaySoundEffect(buttonSFX, transform, 0.4f);
         }
     }
 }

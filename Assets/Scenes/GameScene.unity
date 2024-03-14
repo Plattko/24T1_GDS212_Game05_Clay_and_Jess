@@ -2867,7 +2867,8 @@ MonoBehaviour:
   writingInputField: {fileID: 234197487}
   popupMessage: {fileID: 1603838512}
   sfxManager: {fileID: 941253354}
-  submitButtonSFX: {fileID: 8300000, guid: f7ceb5214952f4741bb0475e2b5d58e8, type: 3}
+  submitButtonSFX: {fileID: 8300000, guid: e1494a04515bbff4f9ba3d7b1cc0c6aa, type: 3}
+  buttonSFX: {fileID: 8300000, guid: d1a80d690f82df841a0e4e1c1f694e16, type: 3}
 --- !u!114 &931288046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2919,6 +2920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1049224140}
+  sfxManager: {fileID: 941253354}
+  buttonSFX: {fileID: 8300000, guid: d1a80d690f82df841a0e4e1c1f694e16, type: 3}
 --- !u!1 &941253352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,7 +3443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
