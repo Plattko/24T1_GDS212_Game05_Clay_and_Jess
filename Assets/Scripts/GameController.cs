@@ -10,8 +10,8 @@ namespace FindingBeauty
 {
     public class GameController : MonoBehaviour
     {
-        private ImagePicker imagePicker;
         private ImageDisplay imageDisplay;
+        private Onboarding onboarding;
 
         [SerializeField] private TMP_InputField writingInputField;
         [SerializeField] private TMP_Text popupMessage;
@@ -20,8 +20,8 @@ namespace FindingBeauty
 
         private void Start()
         {
-            imagePicker = GetComponent<ImagePicker>();
             imageDisplay = GetComponent<ImageDisplay>();
+            onboarding = GetComponent<Onboarding>();
             popupMessage.gameObject.SetActive(false);
         }
 
@@ -66,10 +66,16 @@ namespace FindingBeauty
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
-        bool IsInputValid(string input)
+        
+        private bool IsInputValid(string input)
         {
             var distinctCharCount = input.Distinct().Count();
             return distinctCharCount > 5; // Ensure there's a variety of characters
+        }
+
+        public void PlayButton()
+        {
+            onboarding.StartCoroutine(onboarding.StartGame());
         }
     }
 }
