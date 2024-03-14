@@ -38,7 +38,7 @@ namespace FindingBeauty
             }
             else if (!IsInputValid(inputText))
             {
-                popupMessage.text = "Please donn't keyboard smash :(";
+                popupMessage.text = "Please don't keyboard smash :(";
                 popupMessage.gameObject.SetActive(true);
                 return;
             }
