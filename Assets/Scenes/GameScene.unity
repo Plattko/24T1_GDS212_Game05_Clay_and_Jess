@@ -3157,6 +3157,7 @@ MonoBehaviour:
   writingInputField: {fileID: 234197487}
   submitButton: {fileID: 1171076998}
   isInTransition: 1
+  imageDisplay: {fileID: 931288043}
   infoTypewriterEffect: {fileID: 1055773078}
 --- !u!114 &931288048
 MonoBehaviour:
