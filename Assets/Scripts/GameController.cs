@@ -18,7 +18,7 @@ namespace FindingBeauty
 
         private int progressionIndex = 1;
 
-        [Header("Audio Variables")]
+        [Header("Sound Effect Variables")]
         [SerializeField] private SFXManager sfxManager;
         [SerializeField] private AudioClip submitButtonSFX;
         [SerializeField] private AudioClip buttonSFX;
@@ -61,7 +61,7 @@ namespace FindingBeauty
                 // Empty input field
                 writingInputField.text = "";
 
-                imageDisplay.DisplayNewImage(progressionIndex);
+                imageDisplay.StartCoroutine(imageDisplay.DisplayNewImage(progressionIndex));
                 sfxManager.PlaySoundEffect(submitButtonSFX, transform, 0.4f);
                 progressionIndex++;
             }

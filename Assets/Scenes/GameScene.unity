@@ -2807,6 +2807,9 @@ MonoBehaviour:
   frameImage: {fileID: 840269836}
   playerImage: {fileID: 11400000, guid: 42b1047bb1250734f826e43183c8dfab, type: 2}
   imageSpace: {fileID: 510195050}
+  imageLayout: {fileID: 1889580459}
+  sfxManager: {fileID: 941253354}
+  newImageSFX: {fileID: 8300000, guid: 5c1d5a1c9e1bc5c4ca3deed87036a604, type: 3}
 --- !u!114 &931288044
 MonoBehaviour:
   m_ObjectHideFlags: 0

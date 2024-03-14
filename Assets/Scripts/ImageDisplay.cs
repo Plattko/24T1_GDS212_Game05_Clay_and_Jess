@@ -21,7 +21,14 @@ namespace FindingBeauty
         [SerializeField] private SubjectImage playerImage;
         [SerializeField] private RectTransform imageSpace;
         private float maxHeight;
-        
+
+        [Header("Image Transition")]
+        [SerializeField] CanvasGroup imageLayout;
+
+        [Header("Sound Effect Variables")]
+        [SerializeField] private SFXManager sfxManager;
+        [SerializeField] private AudioClip newImageSFX;
+
         void Start()
         {
             imagePicker = GetComponent<ImagePicker>();
@@ -29,14 +36,27 @@ namespace FindingBeauty
             maxHeight = imageSpace.rect.height;
         }
 
-        public void DisplayNewImage(int progressionIndex)
+        public IEnumerator DisplayNewImage(int progressionIndex)
         {
             SubjectImage image = imagePicker.PickImage(progressionIndex);
 
             if (image != null)
             {
+                // Fade out image
+                yield return FadeLayout(imageLayout, 1f, 0f, 0.5f);
+                
+                // Set new name and image
                 nameText.text = image.name;
                 SetImage(image);
+                // Reset info text
+                infoText.text = "";
+
+                // Play new image sound effect
+                sfxManager.PlaySoundEffect(newImageSFX, transform, 1f);
+                // Fade in new image
+                yield return FadeLayout(imageLayout, 0f, 1f, 1f);
+
+                // Display info text with typewriter effect
                 SetInfoText(image);
             }
             else
@@ -77,6 +97,18 @@ namespace FindingBeauty
         private void SetInfoText(SubjectImage image)
         {
             infoTypewriterEffect.SetText(null, image.imageInfo);
+        }
+
+        private IEnumerator FadeLayout(CanvasGroup layout, float startAlpha, float targetAlpha, float fadeDuration)
+        {
+            float timeElapsed = 0f;
+
+            while (timeElapsed < fadeDuration)
+            {
+                layout.alpha = Mathf.Lerp(startAlpha, targetAlpha, timeElapsed / fadeDuration);
+                timeElapsed += Time.deltaTime;
+                yield return null;
+            }
         }
     }
 }
