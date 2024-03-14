@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
   m_Name: ShopExterior
   m_EditorClassIdentifier: 
-  name: 
-  imageInfo: 
-  image: {fileID: 0}
+  name: Shopfront
+  imageInfo: A small shopfront in Japan.
+  image: {fileID: 21300000, guid: 5bb4ecfae3b5d39499f14c4d332ac1f0, type: 3}

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
   m_Name: Ant
   m_EditorClassIdentifier: 
-  name: 
-  imageInfo: 
-  image: {fileID: 0}
+  name: Ant
+  imageInfo: Formicidae - Ants communicate and coordinate their activities through
+    the use of chemical signals, pheromones. They are incredibly versatile, found
+    in nearly every terrestrial habitat on Earth.
+  image: {fileID: 21300000, guid: 87fd5d4d91a736f4c8b907ddf1d837b5, type: 3}

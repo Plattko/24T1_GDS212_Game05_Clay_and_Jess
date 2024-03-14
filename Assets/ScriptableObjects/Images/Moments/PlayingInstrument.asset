@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
   m_Name: PlayingInstrument
   m_EditorClassIdentifier: 
-  name: 
-  imageInfo: 
-  image: {fileID: 0}
+  name: Playing an Instrument
+  imageInfo: Learning or praciticing an instrument.
+  image: {fileID: 21300000, guid: 74568c5f448d1e343924312acad961b6, type: 3}

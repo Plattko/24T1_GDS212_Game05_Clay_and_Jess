@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
   m_Name: Jellyfish
   m_EditorClassIdentifier: 
-  name: 
-  imageInfo: 
-  image: {fileID: 0}
+  name: Jellyfish
+  imageInfo: 'Cnidaria - These ancient creatures are found in every ocean, from the
+    surface to the deep sea, and some species can even thrive in freshwater. '
+  image: {fileID: 21300000, guid: 888b08a9622748c458d2c2ddad0d6d73, type: 3}

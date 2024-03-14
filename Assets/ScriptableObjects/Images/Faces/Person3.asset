@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Person3
   m_EditorClassIdentifier: 
   name: Lydia
-  imageInfo: 
+  imageInfo: ...
   image: {fileID: 21300000, guid: 4e07e947047198e47b3219fb85287789, type: 3}

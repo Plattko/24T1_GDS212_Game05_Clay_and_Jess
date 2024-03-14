@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
   m_Name: Hiking
   m_EditorClassIdentifier: 
-  name: 
-  imageInfo: 
-  image: {fileID: 0}
+  name: Hiking
+  imageInfo: Exploring a new trail.
+  image: {fileID: 21300000, guid: 411839d790cae4f49b039b3b8973e44d, type: 3}

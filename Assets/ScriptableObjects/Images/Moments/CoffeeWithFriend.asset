@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc8ab200a104a74aa15799115eb804f, type: 3}
   m_Name: CoffeeWithFriend
   m_EditorClassIdentifier: 
-  name: 
-  imageInfo: 
-  image: {fileID: 0}
+  name: Coffee With a Friend
+  imageInfo: Catching up over coffee.
+  image: {fileID: 21300000, guid: b48f05b4c5888bd49922f7fa6e7ca135, type: 3}

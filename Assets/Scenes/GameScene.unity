@@ -3082,23 +3082,50 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 87b8dde246a63d246b11b15e6568e4fd, type: 2}
   - {fileID: 11400000, guid: 5371e1b3d07154d4eaaa30d49d7a0947, type: 2}
   - {fileID: 11400000, guid: 62a0d34f03d4beb469fb324784dc4d31, type: 2}
+  - {fileID: 11400000, guid: b7a7b9bca0558ba4b989f6bcabfc8041, type: 2}
+  - {fileID: 11400000, guid: 10012d20519347c499f2362529b0cd8a, type: 2}
   trees:
   - {fileID: 11400000, guid: 916f6cb26e23ac74da524af71cc0481b, type: 2}
   - {fileID: 11400000, guid: 7084ad58c9783aa4688bfbc9eb23693b, type: 2}
   - {fileID: 11400000, guid: 5ef6d6a33f89cd847b8b7347eb90a857, type: 2}
   - {fileID: 11400000, guid: 44e634459623c4c438ba21e5c85e3459, type: 2}
   - {fileID: 11400000, guid: 64bc7c2ee5e4a3b4c962ad4ea9cb05ec, type: 2}
-  animals: []
+  animals:
+  - {fileID: 11400000, guid: feadb485b797900479f388d79e104b59, type: 2}
+  - {fileID: 11400000, guid: d395a63546a2f664ba06547ba30d5f22, type: 2}
+  - {fileID: 11400000, guid: 6f79afdd1e1eaab4c9f70196d94a7484, type: 2}
+  - {fileID: 11400000, guid: 0cded5eac90d9164b9e3a0e6173b5336, type: 2}
+  - {fileID: 11400000, guid: 4c2bd1d8e393a1949b5eb685015d4a20, type: 2}
+  - {fileID: 11400000, guid: 74e54810e8d00f440be16548de6017f3, type: 2}
+  - {fileID: 11400000, guid: e4cce0a9d415e80459e37d8067b20981, type: 2}
+  insects:
+  - {fileID: 11400000, guid: 15554c6623a1504419bfa9e7f56a72a6, type: 2}
+  - {fileID: 11400000, guid: 8f57d0d30c4f2fd43b5c27ee637d8e5d, type: 2}
+  - {fileID: 11400000, guid: 2ce4cad44e9e685478506d89abbc3d6b, type: 2}
+  - {fileID: 11400000, guid: 388207be6a50c184180d4e6b84755a3e, type: 2}
+  - {fileID: 11400000, guid: 9778d8cfdde663b48b82603c2dcd47a5, type: 2}
+  - {fileID: 11400000, guid: e015730af09d1c04caf97ca6fab99226, type: 2}
+  - {fileID: 11400000, guid: dbd82e6596a7f1d4194b18a7d09f9154, type: 2}
   places:
   - {fileID: 11400000, guid: b8dd6decec0b62f4bb5b03e7ca9dacff, type: 2}
   - {fileID: 11400000, guid: fa888cc3d5c3f154a9ef1d85f01cf31a, type: 2}
   - {fileID: 11400000, guid: 265fd1747f9b15a41b13db5e9f9b1b1a, type: 2}
   - {fileID: 11400000, guid: 16215ae5a6893144f944906c73d60d34, type: 2}
   - {fileID: 11400000, guid: ffaa8b55e9039634a9f4cfeac60dc383, type: 2}
+  - {fileID: 11400000, guid: ef53d13dbd954fa4c822df2e2f790024, type: 2}
+  - {fileID: 11400000, guid: dfddc38eb56dd1b47a6c34f9d7dadc60, type: 2}
+  - {fileID: 11400000, guid: 825ab80300e9dd14a9c6809a4ac60837, type: 2}
+  - {fileID: 11400000, guid: f0ccb905ebc51594c8af7d24eacbc651, type: 2}
   settings:
   - {fileID: 11400000, guid: 77f88eba453881c4b85405b41513bccd, type: 2}
   - {fileID: 11400000, guid: 6db32f53e5dc4bb47912111ee7c8a9c0, type: 2}
   - {fileID: 11400000, guid: ddb08c9d30bd1d54a8de17943b8fbc9c, type: 2}
+  - {fileID: 11400000, guid: 9fa4330c5d9a65748955e917fd317e57, type: 2}
+  - {fileID: 11400000, guid: 6349203ae58240f449e332ca1d9957cf, type: 2}
+  - {fileID: 11400000, guid: fd534928af845fc408a5159f8881f47d, type: 2}
+  - {fileID: 11400000, guid: a6b93466f0bc2ea419072569539e0e28, type: 2}
+  - {fileID: 11400000, guid: 1f4abe2ad4c027647b25076d2ec4c95c, type: 2}
+  - {fileID: 11400000, guid: 447dae1cd38bbdf4ba1619b746401a99, type: 2}
   faces:
   - {fileID: 11400000, guid: 6cc71de55dca3924ab32dc71b8f0a140, type: 2}
   - {fileID: 11400000, guid: 3047e2afec2f1184a9ca80bd6e429c95, type: 2}
@@ -4767,7 +4794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1251506357
 RectTransform:
   m_ObjectHideFlags: 0

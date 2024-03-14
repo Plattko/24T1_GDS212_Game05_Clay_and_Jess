@@ -15,10 +15,12 @@ namespace FindingBeauty
         [SerializeField] private List<SubjectImage> trees = new List<SubjectImage>();
         [Header("Animal Images")]
         [SerializeField] private List<SubjectImage> animals = new List<SubjectImage>();
+        [Header("Insect Images")]
+        [SerializeField] private List<SubjectImage> insects = new List<SubjectImage>();
         [Header("Place Images")]
         [SerializeField] private List<SubjectImage> places = new List<SubjectImage>();
-        [Header("SettingFace Images")]
-        [SerializeField] private List<SubjectImage> settings = new List<SubjectImage>();
+        [Header("Moment Images")]
+        [SerializeField] private List<SubjectImage> moments = new List<SubjectImage>();
         [Header("Face Images")]
         [SerializeField] private List<SubjectImage> faces = new List<SubjectImage>();
 
@@ -29,7 +31,7 @@ namespace FindingBeauty
 
         public SubjectImage PickImage(int progressionIndex)
         {
-            if (progressionIndex < 23)
+            if (progressionIndex < 35)
             {
                 List<SubjectImage> imageList = PickCategory(progressionIndex);
 
@@ -43,15 +45,15 @@ namespace FindingBeauty
                     return image;
                 }
             }
-            else if (progressionIndex == 23)
+            else if (progressionIndex == 35)
             {
                 return playerImage1;
             }
-            else if (progressionIndex == 24)
+            else if (progressionIndex == 36)
             {
                 return playerImage2;
             }
-            else if (progressionIndex == 25)
+            else if (progressionIndex == 37)
             {
                 return playerImage3;
             }
@@ -73,18 +75,28 @@ namespace FindingBeauty
             {
                 list = trees;
             }
-            // Images 11-15 are places
+            // Images 11-15 are animals
             else if (progressionIndex >= 11 && progressionIndex < 16)
+            {
+                list = animals;
+            }
+            // Images 16-20 are insects
+            else if (progressionIndex >= 16 && progressionIndex < 21)
+            {
+                list = insects;
+            }
+            // Images 20-25 are places
+            else if (progressionIndex >= 21 && progressionIndex < 26)
             {
                 list = places;
             }
-            // Images 16-18 are settings
-            else if (progressionIndex >= 16 && progressionIndex < 19)
+            // Images 26-30 are places
+            else if (progressionIndex >= 26 && progressionIndex < 31)
             {
-                list = settings;
+                list = moments;
             }
-            // Images 19-22 are faces
-            else if (progressionIndex >= 19 && progressionIndex < 23)
+            // Images 31-34 are places
+            else if (progressionIndex >= 31 && progressionIndex < 35)
             {
                 list = faces;
             }
