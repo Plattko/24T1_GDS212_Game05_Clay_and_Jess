@@ -7,25 +7,45 @@ namespace FindingBeauty
 {
     public class DisplayContinueSprite : MonoBehaviour
     {
-        public GameObject continueSprite { get; private set; }
-        private Image continueImage;
+        public GameObject continueSpriteSpace { get; private set; }
+        private Transform continueSpriteTransform;
+        private CanvasGroup continueGroup;
+
+        private Animator animator;
 
         private void Awake()
         {
-            continueSprite = transform.GetChild(0).gameObject;
-            continueImage = continueSprite.GetComponent<Image>();
+            continueSpriteSpace = transform.GetChild(0).gameObject;
+            continueGroup = continueSpriteSpace.GetComponent<CanvasGroup>();
+            continueSpriteTransform = continueSpriteSpace.transform.GetChild(1);
+            animator = continueSpriteTransform.GetComponent<Animator>();
         }
 
         public void ShowContinueSprite()
         {
-            continueImage.color = new Color(continueImage.color.r, continueImage.color.g, continueImage.color.b, 0);
-            continueSprite.SetActive(true);
-            StartCoroutine(FadeInSprite(1f));
+            continueGroup.alpha = 0f;
+            continueSpriteSpace.SetActive(true);
+            StartCoroutine(FadeInSprite(0.25f));
+            Debug.Log(name);
+            Debug.Log("Called ShowContinueSprite.");
         }
 
-        public void DisableContinueSprite()
+        public IEnumerator DisableContinueSprite(float enlargeDuration)
         {
-            continueSprite.SetActive(false);
+            // Stop the continue sprite where it is
+            animator.speed = 0f;
+
+            RectTransform rectTransform = continueSpriteTransform.GetComponent<RectTransform>();
+            float timeElapsed = 0f;
+
+            while (timeElapsed < enlargeDuration)
+            {
+                float newScale = Mathf.Lerp(1f, 1.4f, timeElapsed / enlargeDuration);
+                rectTransform.localScale = new Vector3(newScale, newScale, newScale);
+                Debug.Log("Scale is: " + rectTransform.localScale);
+                timeElapsed += Time.deltaTime;
+                yield return null;
+            }
         }
 
         private IEnumerator FadeInSprite(float fadeDuration)
@@ -35,7 +55,7 @@ namespace FindingBeauty
             while (timeElapsed < fadeDuration)
             {
                 float newAlpha = Mathf.Lerp(0, 1, timeElapsed / fadeDuration);
-                continueImage.color = new Color(continueImage.color.r, continueImage.color.g, continueImage.color.b, newAlpha);
+                continueGroup.alpha = newAlpha;
                 timeElapsed += Time.deltaTime;
                 yield return null;
             }

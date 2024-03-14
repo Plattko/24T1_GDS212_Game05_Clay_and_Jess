@@ -79,7 +79,9 @@ namespace FindingBeauty
             // Fade out the current text if it exists
             if (currentText != null)
             {
-                yield return StartCoroutine(FadeText(currentText, 1f, 0f, 0.5f));
+                DisplayContinueSprite currentContinueSprite = currentText.transform.GetComponent<DisplayContinueSprite>();
+                yield return currentContinueSprite.StartCoroutine(currentContinueSprite.DisableContinueSprite(0.5f));
+                yield return StartCoroutine(FadeLayout(currentText.GetComponent<CanvasGroup>(), 1f, 0f, 0.5f));
                 currentText.gameObject.SetActive(false);
             }
 
@@ -144,8 +146,13 @@ namespace FindingBeauty
         {
             isInTransition = true;
 
-            yield return StartCoroutine(FadeText(currentText, 1f, 0f, 0.5f));
-            currentText.gameObject.SetActive(false);
+            if (currentText != null)
+            {
+                DisplayContinueSprite currentContinueSprite = currentText.transform.GetComponent<DisplayContinueSprite>();
+                yield return currentContinueSprite.StartCoroutine(currentContinueSprite.DisableContinueSprite(0.5f));
+                yield return StartCoroutine(FadeLayout(currentText.GetComponent<CanvasGroup>(), 1f, 0f, 0.5f));
+                currentText.gameObject.SetActive(false);
+            }
 
             writingInputField.enabled = true;
             submitButton.enabled = true;
