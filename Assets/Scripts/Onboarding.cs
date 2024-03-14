@@ -30,6 +30,7 @@ namespace FindingBeauty
         public bool isInTransition = true;
 
         [Header("Finish Onboarding Variables")]
+        [SerializeField] private ImageDisplay imageDisplay;
         [SerializeField] private TypewriterEffect infoTypewriterEffect;
 
         private void Awake()
@@ -154,6 +155,8 @@ namespace FindingBeauty
                 yield return StartCoroutine(FadeLayout(currentText.GetComponent<CanvasGroup>(), 1f, 0f, 0.5f));
                 currentText.gameObject.SetActive(false);
             }
+
+            imageDisplay.StartCoroutine(imageDisplay.DisplayNewImage(1));
 
             writingInputField.enabled = true;
             submitButton.enabled = true;
