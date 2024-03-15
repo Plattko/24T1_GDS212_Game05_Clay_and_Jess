@@ -157,6 +157,7 @@ namespace FindingBeauty
             }
 
             imageDisplay.StartCoroutine(imageDisplay.DisplayNewImage(1));
+            GetComponent<GameController>().progressionIndex++;
 
             writingInputField.enabled = true;
             submitButton.enabled = true;

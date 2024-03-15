@@ -16,7 +16,7 @@ namespace FindingBeauty
         [SerializeField] private TMP_InputField writingInputField;
         [SerializeField] private TMP_Text popupMessage;
 
-        private int progressionIndex = 1;
+        public int progressionIndex = 1;
 
         [Header("Sound Effect Variables")]
         [SerializeField] private SFXManager sfxManager;
@@ -54,7 +54,7 @@ namespace FindingBeauty
 
             Debug.Log("Progression index: " + progressionIndex);
 
-            if (progressionIndex < 35)
+            if (progressionIndex < 38)
             {
                 // Add collage functionality
 
