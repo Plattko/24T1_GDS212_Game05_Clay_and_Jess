@@ -3148,6 +3148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   writingInputField: {fileID: 234197487}
   popupMessage: {fileID: 1603838512}
+  progressionIndex: 1
   sfxManager: {fileID: 941253354}
   submitButtonSFX: {fileID: 8300000, guid: e1494a04515bbff4f9ba3d7b1cc0c6aa, type: 3}
   buttonSFX: {fileID: 8300000, guid: d1a80d690f82df841a0e4e1c1f694e16, type: 3}
@@ -3885,8 +3886,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400.00006, y: 48.999817}
-  m_SizeDelta: {x: 784.0685, y: 86.8592}
+  m_AnchoredPosition: {x: 400.00006, y: 46.215}
+  m_SizeDelta: {x: 784.0685, y: 92.429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1055773076
 MonoBehaviour:
