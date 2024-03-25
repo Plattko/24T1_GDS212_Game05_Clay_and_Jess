@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Eucalyptus Tree
   imageInfo: Eucalyptus - The majority of Eucalyptus species originate from Australia,
     each state and territory has its own representative species.
-  image: {fileID: 21300000, guid: 1a70ba982c721694db75453182043f20, type: 3}
+  image: {fileID: 21300000, guid: 4c17860fbf022064f9e42349d693c63a, type: 3}
